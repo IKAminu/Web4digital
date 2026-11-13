@@ -164,3 +164,11 @@ footer{position:relative;z-index:1}
 .desktop-nav a:hover:not(.active){color:#fff;background:rgba(205,228,255,.055)}
 @media(max-width:900px){.desktop-nav{gap:2px;margin-left:10px}.desktop-nav a{padding:9px 8px;font-size:10px}}
 @media(prefers-reduced-motion:reduce){.site-background .hero-background-video{animation:none}}
+
+
+/* WebGL wave-field canvas, pinned behind all page content */
+.shader-background{background:radial-gradient(ellipse at 50% 45%,#102a49 0%,#071522 56%,#050b14 100%)!important}
+.wave-field-canvas{position:absolute;inset:0;width:100%;height:100%;display:block;opacity:.95}
+.shader-background-overlay{position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,rgba(4,10,19,.67),rgba(4,10,19,.22) 58%,rgba(4,10,19,.3)),linear-gradient(0deg,rgba(4,10,19,.44),transparent 45%);z-index:1}
+.shader-unavailable{background:radial-gradient(ellipse at 50% 40%,rgba(34,86,139,.5),transparent 60%),linear-gradient(135deg,#071321,#050b14)}
+@media(max-width:760px){.wave-field-canvas{opacity:.72}.shader-background-overlay{background:linear-gradient(90deg,rgba(4,10,19,.66),rgba(4,10,19,.32)),linear-gradient(0deg,rgba(4,10,19,.5),transparent 50%)}}
