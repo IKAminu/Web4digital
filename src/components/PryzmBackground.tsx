@@ -12,7 +12,7 @@ export default function PryzmBackground() {
   }, []);
 
   return (
-    <div className="pryzm-background" aria-hidden="true">
+    <div className="pryzm-background site-background" aria-hidden="true">
       {!reducedMotion && (
         <video
           className="hero-background-video"
