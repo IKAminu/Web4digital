@@ -24,7 +24,7 @@ export default function PryzmBackground() {
           disablePictureInPicture
           tabIndex={-1}
         >
-          <source src={`${import.meta.env.BASE_URL}media/hero/web4-background.webm`} type="video/webm" />
+          <source src={`${./media/hero/web4-background.webm`} type="video/webm" />
         </video>
       ) : null}
       <div className="hero-video-overlay" />
