@@ -43,3 +43,24 @@
 @media(max-width:900px){.desktop-nav{gap:16px;margin-left:12px}.desktop-nav a{font-size:10px}.site-header{width:calc(100% - 32px)}.route-feature-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:760px){.desktop-nav,.header-contact{display:none}.menu-toggle{display:grid}.page-hero{min-height:460px;padding:145px 7% 65px}.page-hero h1{font-size:clamp(48px,11vw,70px);letter-spacing:-3.5px}.page-hero>p{font-size:13px}.route-feature-grid{grid-template-columns:1fr}.route-detail-intro h2{letter-spacing:-2.5px}.blog-empty{margin:65px auto 80px}.hero-visual{height:350px}.pryzm-background{border-radius:22px}}
 @media(prefers-reduced-motion:reduce){.pryzm-fallback:before,.pryzm-ribbon{animation:none!important}.button,.header-contact{transition:none!important}}
+
+/* Pryzm occupies the hero canvas; copy and navigation remain above it */
+.hero>.pryzm-background{position:absolute;inset:0;z-index:1;border-radius:0;opacity:.88}
+.hero>.hero-grid{z-index:2;pointer-events:none;opacity:.12}
+.hero>.hero-glow{z-index:2;pointer-events:none}
+.hero>.hero-copy{z-index:4}
+.hero>.hero-visual{z-index:3;pointer-events:none}
+.hero>.scroll-cue,.hero>.hero-side-note{z-index:4}
+.hero-visual{background:transparent}
+.journal-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:45px}
+.journal-card{display:flex;flex-direction:column;min-height:270px;padding:28px;transition:transform .3s,border-color .3s,background .3s}
+.journal-card:hover{transform:translateY(-5px);border-color:rgba(169,207,248,.32);background:rgba(24,47,73,.45)}
+.journal-card-meta{display:flex;justify-content:space-between;color:#8297ae;font:9px 'DM Mono',monospace;letter-spacing:.8px}
+.journal-card h2{font-size:25px;letter-spacing:-1px;font-weight:600;margin:42px 0 12px}
+.journal-card p{font-size:12px;line-height:1.85;color:#96a8bd;max-width:440px}
+.journal-read{display:flex;align-items:center;gap:8px;margin-top:auto;padding-top:20px;color:#c7d8eb;font-size:11px}
+.blog-article{max-width:860px;margin:0 auto}
+.blog-meta{font:10px 'DM Mono',monospace;color:#8196ae;margin-bottom:34px}
+.blog-meta span{padding:0 8px}
+.blog-article>p{font-size:16px;line-height:2;color:#c2cfde;margin:0 0 25px}
+@media(max-width:760px){.journal-grid{grid-template-columns:1fr}.journal-card{min-height:230px}.hero>.pryzm-background{opacity:.62}.hero-visual{height:310px}}
