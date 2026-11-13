@@ -13,7 +13,7 @@ export default function PryzmBackground() {
 
   return (
     <div className="pryzm-background" aria-hidden="true">
-      {!reducedMotion ? (
+      {!reducedMotion && (
         <video
           className="hero-background-video"
           autoPlay
@@ -24,9 +24,9 @@ export default function PryzmBackground() {
           disablePictureInPicture
           tabIndex={-1}
         >
-          <source src={`${./media/hero/web4-background.webm`} type="video/webm" />
+          <source src="media/hero/web4-background.webm" type="video/webm" />
         </video>
-      ) : null}
+      )}
       <div className="hero-video-overlay" />
     </div>
   );
