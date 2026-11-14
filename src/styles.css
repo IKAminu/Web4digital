@@ -285,3 +285,17 @@ footer{position:relative;z-index:1}
 .founder-photo{top:20px;left:50%;right:auto;transform:translateX(-50%);width:min(180px,calc(100% - 48px));height:118px;object-fit:cover;object-position:top center;border-radius:11px;border:1px solid rgba(183,211,243,.35)}
 .founder-card>label{top:auto;bottom:20px;right:20px}
 @media(max-width:760px){.founder-card{min-height:300px;padding-top:150px}.founder-photo{width:min(190px,calc(100% - 48px));height:112px;object-position:top center}}
+
+
+/* Founder card: portrait left, identity and details right */
+.founder-card{align-self:center;min-height:220px;padding:22px;display:grid;grid-template-columns: minmax(120px, .82fr) 1fr;align-items:center;gap:24px}
+.founder-portrait{position:relative;width:100%;height:174px;min-width:0;overflow:hidden;border:1px solid rgba(183,211,243,.25);border-radius:12px;background:linear-gradient(145deg,#a1c6ee17,#172e482e)}
+.founder-photo{display:none;position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top center;border:0;border-radius:0;transform:none}
+.founder-photo.loaded{display:block}
+.founder-portrait .founder-monogram{position:absolute;left:15px;bottom:8px;font-size:48px;letter-spacing:-6px;margin:0;pointer-events:none}
+.founder-photo.loaded~.founder-monogram{display:none}
+.founder-info{position:relative;display:flex;flex-direction:column;align-items:flex-start;min-width:0;gap:10px}
+.founder-info>b{font-size:21px;margin:0}
+.founder-info>a{font-size:10px;color:#b3c9e2}
+.founder-info>label{position:static;margin-top:14px}
+@media(max-width:760px){.founder-card{min-height:190px;padding:16px;grid-template-columns:minmax(105px,.8fr) 1fr;gap:17px}.founder-portrait{height:150px}.founder-info>b{font-size:18px}.founder-info>label{font-size:7px;margin-top:8px}}
