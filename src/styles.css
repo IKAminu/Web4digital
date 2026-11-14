@@ -172,3 +172,33 @@ footer{position:relative;z-index:1}
 .shader-background-overlay{position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,rgba(4,10,19,.67),rgba(4,10,19,.22) 58%,rgba(4,10,19,.3)),linear-gradient(0deg,rgba(4,10,19,.44),transparent 45%);z-index:1}
 .shader-unavailable{background:radial-gradient(ellipse at 50% 40%,rgba(34,86,139,.5),transparent 60%),linear-gradient(135deg,#071321,#050b14)}
 @media(max-width:760px){.wave-field-canvas{opacity:.72}.shader-background-overlay{background:linear-gradient(90deg,rgba(4,10,19,.66),rgba(4,10,19,.32)),linear-gradient(0deg,rgba(4,10,19,.5),transparent 50%)}}
+
+
+/* Compact iPhone-style mobile navigation dock */
+.mobile-tab-bar{display:none}
+@media(max-width:760px){
+  .site-header{width:auto;left:16px;right:16px;top:10px;transform:none;height:56px;padding:0 16px;border-radius:999px}
+  .site-header .header-contact,.site-header .menu-toggle{display:none!important}
+  .mobile-tab-bar{
+    display:flex;position:fixed;z-index:60;left:50%;bottom:max(12px,env(safe-area-inset-bottom));
+    transform:translateX(-50%);width:min(430px,calc(100% - 24px));height:62px;
+    align-items:center;justify-content:space-around;gap:2px;padding:5px 7px;
+    border:1px solid rgba(205,229,255,.27);border-radius:22px;
+    background:linear-gradient(135deg,rgba(18,36,57,.88),rgba(7,17,30,.86));
+    box-shadow:0 12px 38px rgba(0,0,0,.42),inset 0 1px 0 rgba(255,255,255,.13);
+    backdrop-filter:blur(28px) saturate(175%);-webkit-backdrop-filter:blur(28px) saturate(175%);
+  }
+  .mobile-tab-bar a{
+    position:relative;flex:1;min-width:0;height:50px;display:flex;flex-direction:column;
+    align-items:center;justify-content:center;gap:3px;border-radius:15px;
+    color:#91a5bd;transition:color .2s,background .2s;
+  }
+  .mobile-tab-bar a svg{display:block;flex:0 0 auto}
+  .mobile-tab-bar a span{font-size:8px;line-height:1.05;font-weight:600;letter-spacing:.05px;white-space:nowrap}
+  .mobile-tab-bar a.active{
+    color:#f2f8ff;background:linear-gradient(145deg,rgba(185,218,250,.19),rgba(106,157,211,.09));
+    box-shadow:inset 0 1px 0 rgba(255,255,255,.19),0 2px 9px rgba(0,0,0,.12)
+  }
+  .mobile-tab-bar a.active:after{content:"";position:absolute;bottom:2px;width:13px;height:2px;border-radius:2px;background:#a9d2ff;box-shadow:0 0 8px #8ec5ff}
+  body{padding-bottom:88px}
+}
