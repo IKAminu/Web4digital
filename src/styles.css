@@ -341,3 +341,19 @@ footer{position:relative;z-index:1}
 @media(prefers-reduced-motion:reduce){.dev-caret{animation:none}}
 
 .web4-attached-logo{display:grid;gap:5px;padding:12px;border:1px solid var(--line);border-radius:4px;background:#0b1726}.web4-attached-logo span{font:7px 'DM Mono',monospace;letter-spacing:1px;color:#7f96b0}.web4-attached-logo b{font-size:10px;color:#c8d9eb}
+
+/* Make the four editable project values unmistakable in the code preview */
+.dev-code-editor pre{font-size:12px;line-height:2.25;padding:22px 0}
+.dev-code-editor code>div{min-height:34px;padding:5px 18px 5px 0;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.dev-code-editor code>div.highlight-line{margin:5px 12px 5px 0;padding:9px 14px 9px 0;border:1px solid rgba(116,178,242,.5);border-left:3px solid #8bc2ff;border-radius:0 6px 6px 0;background:linear-gradient(90deg,rgba(64,128,194,.25),rgba(64,128,194,.07));color:#f0f7ff;box-shadow:inset 0 0 24px rgba(77,143,208,.08)}
+.dev-code-editor code>div.highlight-line>span:last-child{font-size:13px;font-weight:700;color:#f3f8ff}
+.dev-code-field-tag{display:inline-flex;align-items:center;justify-content:center;min-width:105px;padding:5px 8px;border-radius:3px;background:#c5e2ff;color:#102b46;font:800 8px 'DM Mono',monospace;letter-spacing:.65px;box-shadow:0 0 16px rgba(119,181,241,.16)}
+.dev-code-editor code>div.highlight-line .dev-line-no{color:#9bc8f6}
+.dev-preview-intro h3{margin-bottom:8px}
+.dev-onboarding-form>label{font-size:10px;font-weight:700;color:#d8e8fa;gap:8px}
+.dev-onboarding-form input:not([type=file]){padding:13px 14px;font-size:12px;border-color:rgba(132,183,237,.35);background:#0b1a2b}
+.dev-onboarding-form input:not([type=file])::placeholder{color:#7289a2}
+.dev-upload-control{min-height:45px;border-color:rgba(132,183,237,.5);font-size:11px;font-weight:600;background:#0b1a2b}
+.dev-upload-label>small{font-size:9px}
+.dev-submit{min-height:43px;font-size:11px}
+@media(max-width:760px){.dev-code-editor pre{font-size:9px}.dev-code-editor code>div{gap:7px;padding:5px 8px 5px 0}.dev-code-editor code>div.highlight-line{margin-right:5px;padding:8px 7px 8px 0}.dev-code-editor code>div.highlight-line>span:last-child{font-size:10px}.dev-code-field-tag{min-width:88px;font-size:7px;padding:4px 6px}.dev-onboarding-form input:not([type=file]){font-size:16px}}
