@@ -271,3 +271,9 @@ footer{position:relative;z-index:1}
 @keyframes work-marquee-right{from{transform:translateX(-50%)}to{transform:translateX(0)}}
 @media(max-width:760px){.work-marquee{width:calc(100% + 14vw);margin-left:-7%;gap:11px}.work-marquee-track{gap:11px;animation-duration:44s}.work-marquee-row.reverse .work-marquee-track{animation-duration:49s}.work-shot{flex-basis:270px;width:270px;height:172px}.work-marquee-note{font-size:7px;letter-spacing:.7px}}
 @media(prefers-reduced-motion:reduce){.work-marquee-track,.work-marquee-row.reverse .work-marquee-track{animation:none;transform:none}}
+
+
+/* Uploaded brand assets */
+.brand-logo-image{display:none;width:112px;max-height:34px;object-fit:contain;object-position:left center}.wordmark.has-logo .brand-logo-image{display:block}.wordmark.has-logo .wordmark-symbol,.wordmark.has-logo>b{display:none}
+.routehq-logo-image{display:none;max-width:112px;max-height:25px;object-fit:contain;object-position:left center}.preview-top.has-routehq-logo .routehq-logo-image{display:block}.preview-top.has-routehq-logo>b{display:none}
+.founder-photo{display:none;position:absolute;inset:18px auto auto 20px;width:92px;height:92px;object-fit:cover;object-position:center;border-radius:50%;border:1px solid rgba(183,211,243,.35)}.founder-photo.loaded{display:block}.founder-photo.loaded+.founder-monogram{display:none}
