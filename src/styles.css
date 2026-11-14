@@ -551,3 +551,158 @@ footer{position:relative;z-index:1}
  .agency-demo-note{font-size:6px;line-height:1.5}
  .dev-preview-actions{padding:12px}
 }
+
+
+/* Connected business workflow showcase */
+.business-flow-section{margin:100px 0 70px;color:#dce8f6}
+.business-flow-intro{display:grid;grid-template-columns:1fr minmax(260px,.65fr);align-items:end;gap:50px;margin-bottom:32px}
+.business-flow-intro h2{margin:17px 0 0;font-size:clamp(36px,5vw,62px);line-height:.99;letter-spacing:-2.7px;font-weight:500}
+.business-flow-intro h2 em{font-style:normal;color:#91b9df}
+.business-flow-intro>p{max-width:440px;margin:0 0 5px;color:#91a4ba;font-size:14px;line-height:1.8}
+.business-flow-shell{position:relative;overflow:hidden;border:1px solid rgba(130,169,207,.2);border-radius:13px;background:linear-gradient(145deg,rgba(12,27,45,.97),rgba(6,16,29,.98));box-shadow:0 25px 80px rgba(0,0,0,.2)}
+.business-flow-topbar{position:relative;z-index:2;display:flex;justify-content:space-between;align-items:center;gap:15px;padding:15px 19px;border-bottom:1px solid rgba(136,172,207,.13);background:rgba(12,26,43,.88)}
+.business-flow-brand,.business-flow-controls,.business-flow-live{display:flex;align-items:center;gap:10px}
+.business-flow-brand{color:#a8c5e4;font:9px 'DM Mono',monospace;letter-spacing:.8px}
+.business-flow-brand svg{color:#80b7ee}
+.business-flow-brand small{margin-left:7px;padding:4px 7px;border:1px solid rgba(135,175,216,.2);border-radius:3px;color:#718ba7;font-size:8px}
+.business-flow-controls{gap:8px}
+.business-flow-live{color:#89a2bc;font:8px 'DM Mono',monospace;letter-spacing:.4px}
+.business-flow-live i,.pulse-dot{width:6px;height:6px;border-radius:50%;background:#62d6a0;box-shadow:0 0 10px rgba(98,214,160,.6)}
+.business-flow-controls button{display:flex;align-items:center;gap:8px;padding:7px 10px;border:1px solid rgba(142,179,215,.2);border-radius:4px;background:rgba(28,53,78,.5);color:#a9c0d9;font-size:9px;cursor:pointer}
+.business-flow-controls button:hover{border-color:rgba(150,199,244,.55);color:white}
+.business-flow-controls button span{font-size:10px}
+.business-flow-canvas{position:relative;min-height:670px;padding:25px 25px 22px;overflow:hidden}
+.business-flow-canvas-grid{position:absolute;inset:0;opacity:.22;background-image:radial-gradient(rgba(113,155,198,.48) .7px,transparent .7px);background-size:19px 19px;mask-image:linear-gradient(to bottom,black,transparent 95%)}
+.business-flow-stage-label{position:relative;display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:27px;color:#65829e;font:8px 'DM Mono',monospace;letter-spacing:.7px}
+.business-flow-stage-label b{color:#9fc5eb;font-weight:500}
+.business-flow-track{position:relative;z-index:1;max-width:1000px;margin:0 auto}
+.business-flow-row{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:26px}
+.business-flow-item-wrap{position:relative;min-width:0}
+.business-flow-node{position:relative;display:flex;width:100%;min-height:158px;flex-direction:column;align-items:flex-start;padding:13px 13px 12px;border:1px solid rgba(122,158,194,.23);border-radius:7px;background:linear-gradient(145deg,rgba(22,42,64,.95),rgba(12,28,46,.96));color:#d8e7f7;text-align:left;cursor:pointer;transition:border-color .25s,background .25s,transform .25s,box-shadow .25s}
+.business-flow-node:hover,.business-flow-node.inspected{border-color:rgba(139,192,244,.72);transform:translateY(-2px);box-shadow:0 9px 25px rgba(0,0,0,.18)}
+.business-flow-node.done{border-color:rgba(91,190,148,.4);background:linear-gradient(145deg,rgba(17,48,52,.86),rgba(13,34,46,.96))}
+.business-flow-node.running{border-color:rgba(105,177,243,.9);background:linear-gradient(145deg,rgba(26,58,88,.98),rgba(13,34,57,.98));box-shadow:0 0 0 1px rgba(103,173,239,.12),0 0 27px rgba(74,147,218,.13)}
+.business-flow-node-head{display:flex;width:100%;justify-content:space-between;align-items:center;gap:7px;color:#7793af;font:7px 'DM Mono',monospace;letter-spacing:.45px}
+.business-flow-status{display:grid;place-items:center;width:17px;height:17px;border-radius:50%;border:1px solid rgba(128,160,191,.25);color:#718da8}
+.business-flow-status.done{border-color:rgba(92,203,151,.35);background:rgba(67,161,116,.15);color:#79d5a7}
+.business-flow-status.running{border-color:rgba(105,185,250,.5);background:rgba(75,151,215,.17)}
+.business-flow-status.running i{width:6px;height:6px;border-radius:50%;background:#83c5ff;box-shadow:0 0 9px #83c5ff;animation:flowPulse 1s ease-in-out infinite}
+.business-flow-node-icon{display:grid;place-items:center;width:34px;height:34px;margin:13px 0 10px;border:1px solid rgba(118,163,207,.2);border-radius:7px;background:rgba(91,139,187,.1);color:#9ac7f0}
+.business-flow-node.done .business-flow-node-icon{color:#83d9ad;border-color:rgba(91,190,148,.24)}
+.business-flow-node strong{font-size:12px;font-weight:600;letter-spacing:-.15px}
+.business-flow-node-output{margin-top:7px;color:#718ca7;font-size:8px;line-height:1.4}
+.business-flow-node.done .business-flow-node-output{color:#83cda7}
+.business-flow-node.running .business-flow-node-output{color:#a7d3fb}
+.business-flow-progress{position:absolute;right:12px;bottom:0;left:12px;height:2px;overflow:hidden;background:rgba(126,171,213,.13)}
+.business-flow-progress i{display:block;width:42%;height:100%;background:#79bfff;box-shadow:0 0 8px #79bfff;animation:flowProgress 1.8s ease-in-out infinite}
+.business-flow-connector{position:absolute;top:50%;right:-27px;width:27px;height:1px;background:rgba(114,151,188,.3)}
+.business-flow-connector i{position:absolute;top:-2px;left:0;width:5px;height:5px;border-radius:50%;background:#76b9f4;opacity:0;box-shadow:0 0 8px #76b9f4}
+.business-flow-connector.passed{background:rgba(89,194,145,.45)}
+.business-flow-connector.passed i{opacity:1;animation:flowSignal 1.4s linear infinite}
+.business-flow-branch{position:relative;display:grid;grid-template-columns:205px minmax(0,1fr);gap:20px;align-items:center;margin:26px 0 23px;padding:16px 18px;border:1px dashed rgba(114,157,199,.29);border-radius:7px;background:rgba(14,31,49,.76)}
+.business-flow-branch:before{content:"";position:absolute;left:12.5%;top:-27px;height:26px;border-left:1px dashed rgba(114,157,199,.42)}
+.business-flow-branch:after{content:"";position:absolute;left:12.5%;bottom:-24px;height:23px;border-left:1px dashed rgba(114,157,199,.42)}
+.business-flow-branch-agent{display:flex;align-items:center;gap:10px}
+.business-flow-branch-icon{display:grid;place-items:center;width:35px;height:35px;border:1px solid rgba(120,171,222,.27);border-radius:7px;background:rgba(69,121,175,.16);color:#a7d1f8}
+.business-flow-branch-agent>div:nth-child(2){display:grid;gap:4px}
+.business-flow-branch-agent b{color:#c2d7ec;font:8px 'DM Mono',monospace;letter-spacing:.5px}
+.business-flow-branch-agent small{color:#748ca5;font-size:8px}
+.business-flow-agent-pulse{width:6px;height:6px;margin-left:auto;border-radius:50%;background:#7fc3fb;box-shadow:0 0 10px #7fc3fb;animation:flowPulse 1.5s infinite}
+.business-flow-agent-list{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px}
+.business-flow-agent{display:flex;align-items:center;gap:7px;min-width:0;padding:8px;border:1px solid rgba(121,157,192,.15);border-radius:5px;background:rgba(18,39,60,.72);color:#7e9bb7}
+.business-flow-agent>svg{flex:0 0 auto}
+.business-flow-agent>span{display:grid;gap:3px;min-width:0}
+.business-flow-agent b{overflow:hidden;color:#a9bfd5;font-size:8px;font-weight:600;text-overflow:ellipsis;white-space:nowrap}
+.business-flow-agent small{overflow:hidden;color:#6e849b;font-size:7px;text-overflow:ellipsis;white-space:nowrap}
+.business-flow-agent>i{margin-left:auto;color:#637f99;font:6px 'DM Mono',monospace;font-style:normal}
+.business-flow-agent.agent-active{border-color:rgba(103,181,242,.42);background:rgba(37,79,117,.32);color:#9ed0fb}
+.business-flow-agent.agent-active b,.business-flow-agent.agent-active>i{color:#a9d6fc}
+.business-flow-row-secondary .business-flow-node{min-height:158px}
+.business-flow-feedback{display:flex;align-items:center;gap:10px;margin:22px 0 0;color:#7b9ab7}
+.business-flow-feedback>span{display:flex;align-items:center;gap:7px;color:#8eb9df;font:7px 'DM Mono',monospace;letter-spacing:.5px;white-space:nowrap}
+.business-flow-feedback>div{height:1px;flex:1;background:linear-gradient(90deg,rgba(106,164,215,.5),rgba(106,164,215,.06))}
+.business-flow-feedback small{color:#708ba5;font-size:8px;white-space:nowrap}
+.business-flow-detail{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1.4fr auto;gap:18px;align-items:center;margin:0 25px 20px;padding:15px 17px;border:1px solid rgba(126,175,221,.27);border-radius:7px;background:rgba(18,39,60,.96);box-shadow:0 12px 30px rgba(0,0,0,.18)}
+.business-flow-detail-heading{display:grid;gap:5px}
+.business-flow-detail-heading>div{display:grid;gap:5px}
+.business-flow-detail-heading small{color:#83a5c6;font:7px 'DM Mono',monospace}
+.business-flow-detail-heading b{color:#e0edfa;font-size:12px}
+.business-flow-detail-heading button{position:absolute;top:8px;right:10px;border:0;background:none;color:#8ca6bf;font-size:20px;cursor:pointer}
+.business-flow-detail>p{margin:0;color:#9aafc4;font-size:9px;line-height:1.6}
+.business-flow-detail-tasks{display:grid;gap:6px}
+.business-flow-detail-tasks span{display:flex;align-items:center;gap:6px;color:#a7bfd7;font-size:8px}
+.business-flow-detail-tasks svg{color:#7dc9a0}
+.business-flow-detail-output{display:grid;gap:5px;padding-left:13px;border-left:1px solid rgba(131,173,214,.2)}
+.business-flow-detail-output span{color:#7894b0;font:7px 'DM Mono',monospace}
+.business-flow-detail-output b{color:#a9d6bd;font-size:9px;white-space:nowrap}
+.business-flow-footer{position:relative;z-index:1;display:flex;align-items:center;justify-content:space-between;gap:14px;padding:13px 19px;border-top:1px solid rgba(136,172,207,.13);background:rgba(9,22,37,.82)}
+.business-flow-current{display:flex;align-items:center;gap:8px;min-width:0;color:#7690aa;font:7px 'DM Mono',monospace;letter-spacing:.35px;white-space:nowrap}
+.business-flow-current b{overflow:hidden;color:#c4ddf4;font-size:9px;font-weight:600;text-overflow:ellipsis}
+.business-flow-steps{display:flex;align-items:center;gap:5px}
+.business-flow-steps button{width:16px;height:3px;padding:0;border:0;border-radius:4px;background:rgba(124,156,188,.24);cursor:pointer}
+.business-flow-steps button.complete{background:#65b98f}
+.business-flow-steps button.current{background:#80bff5;box-shadow:0 0 8px rgba(128,191,245,.6)}
+.business-flow-disclaimer{color:#5f7891;font:7px 'DM Mono',monospace;letter-spacing:.3px;text-align:right}
+.business-flow-bottom{display:grid;grid-template-columns:1fr .8fr;gap:35px;align-items:start;margin-top:18px}
+.business-flow-agent-summary{display:flex;flex-wrap:wrap;gap:8px 15px}
+.business-flow-agent-summary>span:first-child{width:100%;color:#728da8;font:8px 'DM Mono',monospace;letter-spacing:.7px}
+.business-flow-agent-summary>span:not(:first-child){display:flex;align-items:center;gap:6px;color:#93a9bf;font-size:8px}
+.business-flow-agent-summary i{width:5px;height:5px;border-radius:50%;background:#73bd98}
+.business-flow-bottom>p{margin:0;color:#8399b1;font-size:10px;line-height:1.7}
+@keyframes flowPulse{50%{opacity:.4;transform:scale(.78)}}
+@keyframes flowProgress{0%{transform:translateX(-110%)}100%{transform:translateX(260%)}}
+@keyframes flowSignal{0%{transform:translateX(0);opacity:0}15%{opacity:1}85%{opacity:1}100%{transform:translateX(22px);opacity:0}}
+@media(max-width:900px){
+ .business-flow-intro{grid-template-columns:1fr;gap:16px}
+ .business-flow-intro>p{max-width:620px}
+ .business-flow-canvas{padding:22px 14px}
+ .business-flow-row{gap:16px}
+ .business-flow-connector{right:-17px;width:17px}
+ .business-flow-node{padding:11px 9px;min-height:150px}
+ .business-flow-node strong{font-size:10px}
+ .business-flow-agent-list{grid-template-columns:repeat(3,minmax(0,1fr))}
+ .business-flow-detail{grid-template-columns:1fr 1fr;gap:12px}
+ .business-flow-detail-output{grid-column:1/-1;padding:8px 0 0;border-left:0;border-top:1px solid rgba(131,173,214,.2)}
+}
+@media(max-width:600px){
+ .business-flow-section{margin:72px 0 50px}
+ .business-flow-intro h2{font-size:39px;letter-spacing:-1.8px}
+ .business-flow-intro>p{font-size:12px}
+ .business-flow-topbar{align-items:flex-start;padding:12px;flex-direction:column}
+ .business-flow-brand{font-size:8px}
+ .business-flow-controls{width:100%;justify-content:flex-end}
+ .business-flow-live{margin-right:auto}
+ .business-flow-canvas{padding:18px 12px}
+ .business-flow-stage-label{font-size:7px;margin-bottom:18px}
+ .business-flow-row{grid-template-columns:1fr;gap:10px}
+ .business-flow-node,.business-flow-row-secondary .business-flow-node{min-height:0;display:grid;grid-template-columns:34px minmax(0,1fr) auto;grid-template-rows:auto auto;align-items:center;gap:3px 10px;padding:10px 11px}
+ .business-flow-node-head{grid-column:2/-1;grid-row:1}
+ .business-flow-node-icon{grid-column:1;grid-row:1/3;width:32px;height:32px;margin:0}
+ .business-flow-node strong{grid-column:2;grid-row:2;font-size:11px}
+ .business-flow-node-output{grid-column:3;grid-row:2;margin:0;text-align:right;font-size:7px}
+ .business-flow-progress{right:10px;left:10px}
+ .business-flow-connector{position:relative;top:auto;right:auto;width:1px;height:10px;margin:0 auto;background:rgba(114,151,188,.35)}
+ .business-flow-connector i{top:0;left:-2px}
+ .business-flow-branch{grid-template-columns:1fr;gap:12px;margin:16px 0;padding:13px}
+ .business-flow-branch:before{left:50%;top:-17px;height:16px}
+ .business-flow-branch:after{left:50%;bottom:-17px;height:16px}
+ .business-flow-agent-list{grid-template-columns:1fr 1fr}
+ .business-flow-agent{padding:7px 6px}
+ .business-flow-agent b{font-size:7px}
+ .business-flow-agent small{font-size:6px}
+ .business-flow-agent>i{font-size:5px}
+ .business-flow-feedback{gap:6px;margin-top:16px}
+ .business-flow-feedback>span{font-size:6px}
+ .business-flow-feedback small{font-size:7px}
+ .business-flow-detail{grid-template-columns:1fr;margin:0 10px 14px;padding:13px}
+ .business-flow-detail>p{font-size:9px}
+ .business-flow-detail-output{grid-column:auto}
+ .business-flow-footer{flex-wrap:wrap;padding:11px 12px}
+ .business-flow-current{width:100%}
+ .business-flow-steps{order:2}
+ .business-flow-disclaimer{margin-left:auto;font-size:6px}
+ .business-flow-bottom{grid-template-columns:1fr;gap:15px}
+}
+@media(prefers-reduced-motion:reduce){
+ .business-flow-shell *{animation:none!important;scroll-behavior:auto!important;transition:none!important}
+}
