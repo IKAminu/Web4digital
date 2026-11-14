@@ -18,8 +18,8 @@ void main() {
   p.y += swell;
   vec2 delta = aPosition - uPointer;
   float d = length(delta);
-  float influence = (1.0 - smoothstep(0.0, 2.9, d)) * uPointerActive;
-  p += normalize(delta + vec2(0.0001)) * influence * 0.48;
+  float influence = (1.0 - smoothstep(0.0, 0.78, d)) * uPointerActive;
+  p += normalize(delta + vec2(0.0001)) * influence * 0.14;
   float energy = 0.0;
   for (int i = 0; i < 4; i++) {
     float age = uTime - uRipples[i].z;
@@ -27,7 +27,7 @@ void main() {
       vec2 rd = aPosition - uRipples[i].xy;
       float dist = length(rd);
       float ring = exp(-pow((dist - age * 1.7) * 3.1, 2.0)) * (1.0 - age / 3.8);
-      p += normalize(rd + vec2(0.0001)) * ring * 0.28;
+      p += normalize(rd + vec2(0.0001)) * ring * 0.09;
       energy += ring;
     }
   }
