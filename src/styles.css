@@ -277,3 +277,11 @@ footer{position:relative;z-index:1}
 .brand-logo-image{display:none;width:112px;max-height:34px;object-fit:contain;object-position:left center}.wordmark.has-logo .brand-logo-image{display:block}.wordmark.has-logo .wordmark-symbol,.wordmark.has-logo>b{display:none}
 .routehq-logo-image{display:none;max-width:112px;max-height:25px;object-fit:contain;object-position:left center}.preview-top.has-routehq-logo .routehq-logo-image{display:block}.preview-top.has-routehq-logo>b{display:none}
 .founder-photo{display:none;position:absolute;inset:18px auto auto 20px;width:92px;height:92px;object-fit:cover;object-position:center;border-radius:50%;border:1px solid rgba(183,211,243,.35)}.founder-photo.loaded{display:block}.founder-photo.loaded+.founder-monogram{display:none}
+
+
+/* Refined uploaded brand assets: white Web4 mark and portrait crop */
+.brand-logo-image{width:150px;height:48px;max-height:48px;object-fit:cover;object-position:center;filter:brightness(0) invert(1)}
+.founder-card{min-height:315px;padding-top:155px}
+.founder-photo{top:20px;left:50%;right:auto;transform:translateX(-50%);width:min(180px,calc(100% - 48px));height:118px;object-fit:cover;object-position:top center;border-radius:11px;border:1px solid rgba(183,211,243,.35)}
+.founder-card>label{top:auto;bottom:20px;right:20px}
+@media(max-width:760px){.founder-card{min-height:300px;padding-top:150px}.founder-photo{width:min(190px,calc(100% - 48px));height:112px;object-position:top center}}
