@@ -250,3 +250,24 @@ footer{position:relative;z-index:1}
   .preview-lower>div:last-child{display:none}
   .preview-disclaimer{font-size:6px;padding:7px 10px}
 }
+
+
+/* Two-lane, opposing infinite showcase for selected work */
+.work-section{overflow:hidden}
+.work-marquee{position:relative;display:grid;gap:16px;width:calc(100% + 19vw);margin:18px 0 0 -9.5%;padding:10px 0;overflow:hidden;mask-image:linear-gradient(90deg,transparent 0%,#000 5%,#000 95%,transparent 100%)}
+.work-marquee-row{width:100%;overflow:hidden}
+.work-marquee-track{display:flex;align-items:stretch;gap:16px;width:max-content;animation:work-marquee-left 58s linear infinite;will-change:transform}
+.work-marquee-row.reverse .work-marquee-track{animation-name:work-marquee-right;animation-duration:64s}
+.work-marquee:hover .work-marquee-track{animation-play-state:paused}
+.work-shot{position:relative;flex:0 0 350px;width:350px;height:218px;overflow:hidden;border:1px solid rgba(173,205,240,.18);border-radius:8px;background:linear-gradient(145deg,#13263d,#081321);box-shadow:0 16px 42px rgba(0,0,0,.25)}
+.work-shot-placeholder{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:radial-gradient(ellipse at 50% 42%,rgba(78,132,191,.23),transparent 57%),linear-gradient(135deg,#102139,#081321)}
+.work-shot-placeholder>span{font-size:58px;font-weight:800;letter-spacing:-7px;color:#d5e8fb}.work-shot-placeholder>span>span{color:#86b8ed}
+.work-shot-placeholder small{position:absolute;right:15px;top:14px;color:#8098b3;font:8px 'DM Mono',monospace;letter-spacing:1px}
+.work-shot>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.work-shot-caption{position:absolute;left:0;right:0;bottom:0;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:28px 14px 12px;background:linear-gradient(0deg,rgba(3,8,15,.92),rgba(3,8,15,.0));opacity:0;transition:opacity .25s}
+.work-shot:hover .work-shot-caption{opacity:1}.work-shot-caption b{font-size:11px;font-weight:600}.work-shot-caption span{font:7px 'DM Mono',monospace;letter-spacing:.7px;color:#a7bbd2}
+.work-marquee-note{display:flex;justify-content:space-between;margin-top:13px;color:#6f849c;font:8px 'DM Mono',monospace;letter-spacing:1.1px}
+@keyframes work-marquee-left{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes work-marquee-right{from{transform:translateX(-50%)}to{transform:translateX(0)}}
+@media(max-width:760px){.work-marquee{width:calc(100% + 14vw);margin-left:-7%;gap:11px}.work-marquee-track{gap:11px;animation-duration:44s}.work-marquee-row.reverse .work-marquee-track{animation-duration:49s}.work-shot{flex-basis:270px;width:270px;height:172px}.work-marquee-note{font-size:7px;letter-spacing:.7px}}
+@media(prefers-reduced-motion:reduce){.work-marquee-track,.work-marquee-row.reverse .work-marquee-track{animation:none;transform:none}}
