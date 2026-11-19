@@ -1,7 +1,7 @@
 import{useEffect,useState}from'react';
 import{Activity,ArrowDown,ArrowRight,BarChart3,Bell,Bot,Check,ChevronRight,Clock,Database,FileText,Globe2,Mail,Megaphone,MessageCircle,MousePointer2,PackageCheck,RefreshCw,Send,ShoppingCart,Users,Wallet,Workflow,Zap}from'lucide-react';
 
-const groups=[
+const groups:any[]=[
 {id:'campaigns',name:'Campaigns',color:'violet',icon:Megaphone,description:'Attract the right audience',nodes:[['Meta Ads','Campaign published',Megaphone],['Ad engagement','Clicks and enquiries',Activity],['Campaign analytics','Audience signals',BarChart3]],detail:'Paid campaigns, creative production, audience targeting and performance tracking bring new prospects into the business.'},
 {id:'websites',name:'Websites',color:'blue',icon:Globe2,description:'Turn visits into enquiries',nodes:[['Landing page','Offer and content',Globe2],['Enquiry form','Details submitted',FileText],['Lead event','Conversion recorded',Zap]],detail:'Websites, landing pages, forms and conversion tracking give every visitor a clear path to take action.'},
 {id:'engagement',name:'Engagement',color:'cyan',icon:MessageCircle,description:'Start the conversation',nodes:[['New enquiry','Trigger received',Bell],['WhatsApp / chat','Instant response',MessageCircle],['Details captured','Contact information',Users]],detail:'Messaging, chatbots and follow-up sequences respond quickly, collect useful information and keep conversations moving.'},
