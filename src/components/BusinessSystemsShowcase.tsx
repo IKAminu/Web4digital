@@ -12,7 +12,7 @@ const groups:any[]=[
 {id:'analytics',name:'Analytics & retention',color:'violet',icon:BarChart3,description:'Learn, improve and repeat',nodes:[['Performance report','Results consolidated',BarChart3],['Customer feedback','Review and insight',MessageCircle],['Re-engagement','Next campaign signal',RefreshCw]],detail:'Dashboards and customer feedback reveal what is working, where prospects drop off and how to improve repeat business.'}
 ];
 const displayOrder=[0,1,2,3,7,6,5,4];
-const allNodes=displayOrder.flatMap(index=>groups[index].nodes.map((node,i)=>({id:groups[index].id+'-'+i,group:index,title:node[0],subtitle:node[1],icon:node[2]})));
+const allNodes=displayOrder.flatMap((index:number)=>groups[index].nodes.map((node:any,i:number)=>({id:groups[index].id+'-'+i,group:index,title:node[0],subtitle:node[1],icon:node[2]})));
 function ClipboardIcon(props:any){return <FileText {...props}/>}
 
 export default function BusinessSystemsShowcase(){
