@@ -1,5 +1,5 @@
-import{useEffect,useState}from'react';
-import{ArrowUpRight,BarChart3,Check,ChevronRight,MousePointer2,Play,Pause,RefreshCw,Send,Target,TrendingUp,Users,Wallet}from'lucide-react';
+import{useEffect,useState,type CSSProperties}from'react';
+import{ArrowUpRight,BarChart3,Check,ChevronRight,MousePointer2,Play,Pause,RefreshCw,Target,TrendingUp,Users,Wallet}from'lucide-react';
 
 type Industry='travel'|'retail'|'professional';
 const campaigns:Record<Industry,{label:string;brand:string;headline:string;subline:string;cta:string;channel:string;impressions:string;clicks:string;leads:string;cpl:string;conversion:string;revenue:string;audience:string;creative:string;accent:string;bars:number[]}> = {
@@ -9,9 +9,8 @@ const campaigns:Record<Industry,{label:string;brand:string;headline:string;subli
 };
 const phases=[{label:'Creative prepared',caption:'Campaign assets and variations ready'},{label:'Campaign launched',caption:'Ads delivered to selected audiences'},{label:'Audience responding',caption:'Clicks and visits recorded'},{label:'Leads captured',caption:'Enquiries enter the growth system'},{label:'Performance measured',caption:'Results reviewed and optimised'}];
 export default function MarketingGrowthShowcase(){
- const[industry,setIndustry]=useState<Industry>('travel');const[phase,setPhase]=useState(0);const[paused,setPaused]=useState(false);const[dataPulse,setDataPulse]=useState(0);const campaign=campaigns[industry];
+ const[industry,setIndustry]=useState<Industry>('travel');const[phase,setPhase]=useState(0);const[paused,setPaused]=useState(false);const campaign=campaigns[industry];
  useEffect(()=>{if(paused||window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;const timer=window.setInterval(()=>setPhase((p)=>(p+1)%phases.length),2600);return()=>window.clearInterval(timer)},[paused]);
- useEffect(()=>{const timer=window.setInterval(()=>setDataPulse(p=>p+1),4200);return()=>window.clearInterval(timer)},[]);
  return <section className="growth-showcase" aria-label="Interactive marketing and growth campaign demonstration">
   <div className="growth-showcase-heading"><div><div className="eyebrow"><i/> MARKETING / CAMPAIGN PERFORMANCE</div><h2>Make attention<br/><em>count.</em></h2></div><p>Creative, advertising, audience insights and conversion measurement, working together to turn attention into business activity.</p></div>
   <div className="growth-workspace">
@@ -20,7 +19,7 @@ export default function MarketingGrowthShowcase(){
    <div className="growth-main-grid">
     <div className="growth-creative-column"><div className="growth-panel-label"><span>01 / THE CREATIVE</span><span>AD PREVIEW</span></div>
      <div className="growth-ad-previews">
-      <article className="growth-ad-card growth-ad-primary"><div className="growth-ad-image" style={{'--ad-accent':campaign.accent} as React.CSSProperties}><div className="growth-ad-sun"/><div className="growth-ad-landscape"><i/><i/><i/></div><div className="growth-ad-image-top"><span>{campaign.brand}</span><small>SPONSORED</small></div><div className="growth-ad-image-copy"><small>{campaign.creative}</small><b>{campaign.headline.split('\n').map((line,index)=><span key={index}>{line}</span>)}</b><p>{campaign.subline}</p><span className="growth-ad-cta">{campaign.cta} ↗</span></div><span className="growth-ad-image-index">W4 / CREATIVE 01</span></div><div className="growth-ad-meta"><span><b>Instagram</b><small>Feed / 4:5</small></span><span className="growth-ad-active"><i/> ACTIVE PREVIEW</span></div></article>
+      <article className="growth-ad-card growth-ad-primary"><div className="growth-ad-image" style={{'--ad-accent':campaign.accent} as CSSProperties}><div className="growth-ad-sun"/><div className="growth-ad-landscape"><i/><i/><i/></div><div className="growth-ad-image-top"><span>{campaign.brand}</span><small>SPONSORED</small></div><div className="growth-ad-image-copy"><small>{campaign.creative}</small><b>{campaign.headline.split('\n').map((line,index)=><span key={index}>{line}</span>)}</b><p>{campaign.subline}</p><span className="growth-ad-cta">{campaign.cta} ↗</span></div><span className="growth-ad-image-index">W4 / CREATIVE 01</span></div><div className="growth-ad-meta"><span><b>Instagram</b><small>Feed / 4:5</small></span><span className="growth-ad-active"><i/> ACTIVE PREVIEW</span></div></article>
       <article className="growth-ad-card growth-ad-story"><div className="growth-story-image" style={{'--ad-accent':campaign.accent} as React.CSSProperties}><div className="growth-story-orb"/><small>{campaign.brand}</small><b>{campaign.headline.split('\n').join(' ')}</b><span>{campaign.cta} ↗</span><i>STORY / 02</i></div><div className="growth-ad-meta"><span><b>Instagram Story</b><small>Vertical / 9:16</small></span><span>VARIATION 02</span></div></article>
      </div>
      <div className="growth-channel-row"><span>PLACEMENTS</span><b>Instagram</b><b>Facebook</b><b>Google Search</b><b>Landing page</b></div>
